@@ -8,16 +8,37 @@ import Dispositivos.Apple.*;
 
 public class User {
     public static void main(String[] args) {
-        ReprodutorDeMusica reprodutor = new Tocar();
+        Iphone meuIphone = new Iphone();
+        NavegadorDeinternet safari = new ExibePagina();
+        ReprodutorDeMusica itunes = new Tocar();
         AparelhoTelefonico telefone = new Ligar();
-        NavegadorDeinternet navegador = new ExibePagina();
-        ReprodutorDeMusica reproduzir = new Iphone();
 
-
-        reprodutor.Reprodutor();
+        System.out.println("Sistema Antes do Iphone: ");
+        safari.Navegador();
+        itunes.Reprodutor();
         telefone.Telefone();
-        navegador.Navegador();
-        reproduzir.Reprodutor();
+        System.out.println("");
+        System.out.println("");
 
+
+        // Testando os métodos de NavegadorDeinternet
+        System.out.println("Navegador Iphone: ");
+        meuIphone.ExibePagina();
+        meuIphone.AtualizaPagina();
+        meuIphone.AdicionandoNovaAba();
+        System.out.println(" ");
+        // Testando os métodos de ReprodutorDeMusica
+        System.out.println("Apliativo de Musica Iphone: ");
+        meuIphone.Tocar();
+        meuIphone.Pausa();
+        meuIphone.SelecionarMusica();
+        System.out.println(" ");
+
+        // Testando os métodos de AparelhoTelefonico
+        System.out.println("Aplicativo de telefone Iphone: ");
+        meuIphone.Ligar();
+        meuIphone.Atender();
+        meuIphone.InciaCorreioDeVoz();
     }
 }
+
